@@ -19,6 +19,30 @@ C:\Users\tanap\Documents\Visual Studio 2015\Projects\RunAuto\RunAuto\bin\Debug\X
 C:\Users\tanap\Documents\Visual Studio 2015\Projects\RunAuto\RunAuto\bin\Debug\Xamarin.Forms.Platform.pdb
 C:\Users\tanap\Documents\Visual Studio 2015\Projects\RunAuto\RunAuto\bin\Debug\Xamarin.Forms.Xaml.pdb
 C:\Users\tanap\Documents\Visual Studio 2015\Projects\RunAuto\RunAuto\bin\Debug\Xamarin.Forms.Xaml.xml
+<<<<<<< HEAD
 C:\Users\tanap\Documents\GitHub\RunAuto-Gui\RunAuto\RunAuto\bin\Debug\RunAuto.exe.config
 C:\Users\tanap\Documents\GitHub\RunAuto-Gui\RunAuto\RunAuto\obj\Debug\RunAuto.exe
 C:\Users\tanap\Documents\GitHub\RunAuto-Gui\RunAuto\RunAuto\obj\Debug\RunAuto.pdb
+=======
+C:\Users\BOM\Documents\gitHub\RunAuto-Gui\RunAuto\RunAuto\bin\Debug\RunAuto.exe.config
+C:\Users\BOM\Documents\gitHub\RunAuto-Gui\RunAuto\RunAuto\obj\Debug\RunAuto.exe
+C:\Users\BOM\Documents\gitHub\RunAuto-Gui\RunAuto\RunAuto\obj\Debug\RunAuto.pdb
+C:\Users\BOM\Documents\gitHub\RunAuto-Gui\RunAuto\RunAuto\obj\Debug\RunAuto.csprojResolveAssemblyReference.cache
+C:\Users\BOM\Documents\gitHub\RunAuto-Gui\RunAuto\RunAuto\obj\Debug\RunAuto.Form1.resources
+C:\Users\BOM\Documents\gitHub\RunAuto-Gui\RunAuto\RunAuto\obj\Debug\RunAuto.Properties.Resources.resources
+C:\Users\BOM\Documents\gitHub\RunAuto-Gui\RunAuto\RunAuto\obj\Debug\RunAuto.csproj.GenerateResource.Cache
+C:\Users\BOM\Documents\gitHub\RunAuto-Gui\RunAuto\RunAuto\bin\Debug\RunAuto.exe
+C:\Users\BOM\Documents\gitHub\RunAuto-Gui\RunAuto\RunAuto\bin\Debug\RunAuto.pdb
+C:\Users\BOM\Documents\gitHub\RunAuto-Gui\RunAuto\RunAuto\bin\Debug\CircularProgressBar.dll
+C:\Users\BOM\Documents\gitHub\RunAuto-Gui\RunAuto\RunAuto\bin\Debug\WinFormAnimation.dll
+C:\Users\BOM\Documents\gitHub\RunAuto-Gui\RunAuto\RunAuto\bin\Debug\Xamarin.Forms.Core.dll
+C:\Users\BOM\Documents\gitHub\RunAuto-Gui\RunAuto\RunAuto\bin\Debug\Xamarin.Forms.Platform.dll
+C:\Users\BOM\Documents\gitHub\RunAuto-Gui\RunAuto\RunAuto\bin\Debug\Xamarin.Forms.Xaml.dll
+C:\Users\BOM\Documents\gitHub\RunAuto-Gui\RunAuto\RunAuto\bin\Debug\CircularProgressBar.xml
+C:\Users\BOM\Documents\gitHub\RunAuto-Gui\RunAuto\RunAuto\bin\Debug\WinFormAnimation.xml
+C:\Users\BOM\Documents\gitHub\RunAuto-Gui\RunAuto\RunAuto\bin\Debug\Xamarin.Forms.Core.pdb
+C:\Users\BOM\Documents\gitHub\RunAuto-Gui\RunAuto\RunAuto\bin\Debug\Xamarin.Forms.Core.xml
+C:\Users\BOM\Documents\gitHub\RunAuto-Gui\RunAuto\RunAuto\bin\Debug\Xamarin.Forms.Platform.pdb
+C:\Users\BOM\Documents\gitHub\RunAuto-Gui\RunAuto\RunAuto\bin\Debug\Xamarin.Forms.Xaml.pdb
+C:\Users\BOM\Documents\gitHub\RunAuto-Gui\RunAuto\RunAuto\bin\Debug\Xamarin.Forms.Xaml.xml
+>>>>>>> 46d78aad72aee3934569105431d4519a07f49621

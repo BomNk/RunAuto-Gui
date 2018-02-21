@@ -9,21 +9,23 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO.Ports;
 using System.Runtime.InteropServices.ComTypes;
-
-
+using System.Threading;
 
 namespace RunAuto
 {
     public partial class Form1 : Form 
     {
         private SerialPort myport;
-        private string in_data="";
-        private int data;
+         string in_data="";
+         int data = 0;
         public Form1()
         {
             InitializeComponent();
+
             circularProgressBar1.Minimum = 0;
-            circularProgressBar1.Maximum = 150;
+            circularProgressBar1.Maximum = 200;
+            progressBar1.Maximum = 200;
+            progressBar1.Minimum = 0;
 
         }
 
@@ -43,7 +45,7 @@ namespace RunAuto
             myport.DataReceived += myport_DataReceived;
             try{
                 myport.Open();
-                Data_table.Text = "test";
+               // Data_table.Text = "test";
             }
             catch(Exception ex)
             {
@@ -54,14 +56,54 @@ namespace RunAuto
 
         private void myport_DataReceived(object sender, SerialDataReceivedEventArgs e)
         {
-            in_data = myport.ReadLine();
-            //data = int.Parse(in_data);
-            this.Invoke(new EventHandler(data_serialport_Tick));
+            string str = myport.ReadLine();
+           
+
+            // data_serialport.Enabled = true;
+            //data_serialport.Start();
+            this.BeginInvoke(new LineReceivedEvent(LineReceived),str);
+           
             //Data_table.Text = in_data;
         }
+        private delegate void LineReceivedEvent(string line);
+        private void LineReceived(string str)
+        {
+            int x = 0;
+           
+            /* for(int i = 0; i < IntParseFast(str); i++)
+             {
+                 x++;
+             }*/
+            x = Int32.Parse(str);
+
+            if (x >= 0 && x < 200)
+            {
+                circularProgressBar1.Text = str;
+                progressBar1.Value = Int32.Parse(str);
+                circularProgressBar1.Value = Int32.Parse(str);
+            }
+            else
+            {
+                circularProgressBar1.Text = "Error";
+                progressBar1.Value = 0;
+                circularProgressBar1.Value = 0;
+            }
+                //circularProgressBar1.Update();
 
 
+            }
 
+        public static int IntParseFast(string value)
+        {
+            int result = 0;
+            StringBuilder x = new StringBuilder();
+            x.Append(value);
+
+            for (int i = 0; i < x.Length; i++)
+                result = result + ((x[i] - '0')*(10^i));
+
+            return result;
+        }
 
 
 
@@ -74,16 +116,19 @@ namespace RunAuto
         {
 
         }
-
+/*
         private void data_serialport_Tick(object sender, EventArgs e)
         {
             //string in_data = myport.ReadLine();
+            //in_data = myport.ReadLine();
             //circularProgressBar1.Value = Int32.Parse(in_data);
-            data = int.Parse(in_data);
-            circularProgressBar1.Value = data;
+           
+            //data = Int32.Parse(in_data);
             circularProgressBar1.Text = in_data;
-           //
-             Data_table.Text = "Num" + data;
-        }
+            //data = Int32.Parse(in_data);
+            circularProgressBar1.Value = data;
+  
+            //Data_table.Text = "Num = " + data;
+        }*/
     }
 }

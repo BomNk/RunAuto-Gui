@@ -31,14 +31,14 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.circularProgressBar1 = new CircularProgressBar.CircularProgressBar();
-            this.button1 = new System.Windows.Forms.Button();
+            this.START = new System.Windows.Forms.Button();
             this.serialPort1 = new System.IO.Ports.SerialPort(this.components);
-            this.label1 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.time = new System.Windows.Forms.Label();
+            this.Exit = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.up = new System.Windows.Forms.Button();
+            this.down = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -46,8 +46,8 @@
             this.text_portName = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.connect = new System.Windows.Forms.Button();
-            this.Data_table = new System.Windows.Forms.TextBox();
             this.data_serialport = new System.Windows.Forms.Timer(this.components);
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -61,7 +61,7 @@
             this.circularProgressBar1.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.circularProgressBar1.InnerMargin = 2;
             this.circularProgressBar1.InnerWidth = -1;
-            this.circularProgressBar1.Location = new System.Drawing.Point(2, 12);
+            this.circularProgressBar1.Location = new System.Drawing.Point(63, 37);
             this.circularProgressBar1.MarqueeAnimationSpeed = 2000;
             this.circularProgressBar1.Name = "circularProgressBar1";
             this.circularProgressBar1.OuterColor = System.Drawing.Color.Gray;
@@ -76,7 +76,7 @@
             this.circularProgressBar1.SubscriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
             this.circularProgressBar1.SubscriptMargin = new System.Windows.Forms.Padding(10, -35, 0, 0);
             this.circularProgressBar1.SubscriptText = "";
-            this.circularProgressBar1.SuperscriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
+            this.circularProgressBar1.SuperscriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.circularProgressBar1.SuperscriptMargin = new System.Windows.Forms.Padding(10, 35, 0, 0);
             this.circularProgressBar1.SuperscriptText = "   bpm";
             this.circularProgressBar1.TabIndex = 0;
@@ -86,40 +86,40 @@
             this.circularProgressBar1.Value = 68;
             this.circularProgressBar1.Click += new System.EventHandler(this.circularProgressBar1_Click);
             // 
-            // button1
+            // START
             // 
-            this.button1.BackColor = System.Drawing.Color.SpringGreen;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.button1.Location = new System.Drawing.Point(45, 523);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(228, 100);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "START";
-            this.button1.UseVisualStyleBackColor = false;
+            this.START.BackColor = System.Drawing.Color.SpringGreen;
+            this.START.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.START.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.START.Location = new System.Drawing.Point(45, 523);
+            this.START.Name = "START";
+            this.START.Size = new System.Drawing.Size(228, 100);
+            this.START.TabIndex = 1;
+            this.START.Text = "START";
+            this.START.UseVisualStyleBackColor = false;
             // 
-            // label1
+            // time
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Angsana New", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label1.Location = new System.Drawing.Point(417, 508);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(291, 133);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "00:00:00";
+            this.time.AutoSize = true;
+            this.time.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.time.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.time.Location = new System.Drawing.Point(342, 511);
+            this.time.Name = "time";
+            this.time.Size = new System.Drawing.Size(425, 108);
+            this.time.TabIndex = 2;
+            this.time.Text = "00:00:00";
             // 
-            // button2
+            // Exit
             // 
-            this.button2.BackColor = System.Drawing.Color.Red;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.button2.Location = new System.Drawing.Point(813, 511);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(170, 112);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "X";
-            this.button2.UseVisualStyleBackColor = false;
+            this.Exit.BackColor = System.Drawing.Color.Red;
+            this.Exit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Exit.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.Exit.Location = new System.Drawing.Point(829, 511);
+            this.Exit.Name = "Exit";
+            this.Exit.Size = new System.Drawing.Size(170, 112);
+            this.Exit.TabIndex = 3;
+            this.Exit.Text = "X";
+            this.Exit.UseVisualStyleBackColor = false;
             // 
             // label2
             // 
@@ -144,32 +144,32 @@
             this.label3.TabIndex = 5;
             this.label3.Text = "5";
             // 
-            // button3
+            // up
             // 
-            this.button3.BackColor = System.Drawing.Color.Lime;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.button3.Location = new System.Drawing.Point(192, 278);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(81, 75);
-            this.button3.TabIndex = 6;
-            this.button3.Text = "+";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.up.BackColor = System.Drawing.Color.Lime;
+            this.up.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.up.Location = new System.Drawing.Point(192, 278);
+            this.up.Name = "up";
+            this.up.Size = new System.Drawing.Size(81, 75);
+            this.up.TabIndex = 6;
+            this.up.Text = "+";
+            this.up.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.up.UseVisualStyleBackColor = false;
+            this.up.Click += new System.EventHandler(this.button3_Click);
             // 
-            // button4
+            // down
             // 
-            this.button4.BackColor = System.Drawing.Color.Red;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 39.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.button4.ForeColor = System.Drawing.Color.Black;
-            this.button4.Location = new System.Drawing.Point(194, 405);
-            this.button4.Name = "button4";
-            this.button4.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.button4.Size = new System.Drawing.Size(79, 72);
-            this.button4.TabIndex = 7;
-            this.button4.Text = "-";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button4.UseVisualStyleBackColor = false;
+            this.down.BackColor = System.Drawing.Color.Red;
+            this.down.Font = new System.Drawing.Font("Microsoft Sans Serif", 39.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.down.ForeColor = System.Drawing.Color.Black;
+            this.down.Location = new System.Drawing.Point(194, 405);
+            this.down.Name = "down";
+            this.down.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.down.Size = new System.Drawing.Size(79, 72);
+            this.down.TabIndex = 7;
+            this.down.Text = "-";
+            this.down.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.down.UseVisualStyleBackColor = false;
             // 
             // pictureBox1
             // 
@@ -250,18 +250,17 @@
             this.connect.UseVisualStyleBackColor = false;
             this.connect.Click += new System.EventHandler(this.connect_Click);
             // 
-            // Data_table
-            // 
-            this.Data_table.Location = new System.Drawing.Point(218, 12);
-            this.Data_table.Multiline = true;
-            this.Data_table.Name = "Data_table";
-            this.Data_table.Size = new System.Drawing.Size(123, 223);
-            this.Data_table.TabIndex = 15;
-            // 
             // data_serialport
             // 
             this.data_serialport.Interval = 10;
-            this.data_serialport.Tick += new System.EventHandler(this.data_serialport_Tick);
+            // 
+            // progressBar1
+            // 
+            this.progressBar1.Location = new System.Drawing.Point(360, 62);
+            this.progressBar1.Maximum = 1024;
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(149, 23);
+            this.progressBar1.TabIndex = 15;
             // 
             // Form1
             // 
@@ -269,7 +268,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSlateGray;
             this.ClientSize = new System.Drawing.Size(1024, 653);
-            this.Controls.Add(this.Data_table);
+            this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.connect);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.text_portName);
@@ -277,13 +276,13 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.down);
+            this.Controls.Add(this.up);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.Exit);
+            this.Controls.Add(this.time);
+            this.Controls.Add(this.START);
             this.Controls.Add(this.circularProgressBar1);
             this.DoubleBuffered = true;
             this.ForeColor = System.Drawing.Color.Black;
@@ -300,14 +299,14 @@
         #endregion
 
         private CircularProgressBar.CircularProgressBar circularProgressBar1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button START;
         private System.IO.Ports.SerialPort serialPort1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label time;
+        private System.Windows.Forms.Button Exit;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button up;
+        private System.Windows.Forms.Button down;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
@@ -315,8 +314,8 @@
         private System.Windows.Forms.TextBox text_portName;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button connect;
-        private System.Windows.Forms.TextBox Data_table;
         private System.Windows.Forms.Timer data_serialport;
+        private System.Windows.Forms.ProgressBar progressBar1;
     }
 }
 
