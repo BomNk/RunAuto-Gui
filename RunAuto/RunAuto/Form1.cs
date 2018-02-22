@@ -79,8 +79,8 @@ namespace RunAuto
             if (x >= 0 && x < 200)
             {
                 circularProgressBar1.Text = str;
-                progressBar1.Value = Int32.Parse(str);
-                circularProgressBar1.Value = Int32.Parse(str);
+                progressBar1.Value = x;//Int32.Parse(str);
+                circularProgressBar1.Value =  Int32.Parse(str);
             }
             else
             {
