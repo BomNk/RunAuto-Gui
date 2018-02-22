@@ -64,3 +64,4 @@ C:\Users\tanap\Documents\GitHub\RunAuto-Gui\RunAuto\RunAuto\obj\Debug\RunAuto.cs
 C:\Users\tanap\Documents\GitHub\RunAuto-Gui\RunAuto\RunAuto\obj\Debug\RunAuto.Form1.resources
 C:\Users\tanap\Documents\GitHub\RunAuto-Gui\RunAuto\RunAuto\obj\Debug\RunAuto.Properties.Resources.resources
 C:\Users\tanap\Documents\GitHub\RunAuto-Gui\RunAuto\RunAuto\obj\Debug\RunAuto.csproj.GenerateResource.Cache
+C:\Users\tanap\Documents\GitHub\RunAuto-Gui\RunAuto\RunAuto\obj\Debug\RunAuto.Form2.resources
