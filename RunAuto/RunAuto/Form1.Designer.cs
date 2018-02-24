@@ -39,7 +39,7 @@
             this.text_speed = new System.Windows.Forms.Label();
             this.down = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.text_kao = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.data_serialport = new System.Windows.Forms.Timer(this.components);
@@ -50,6 +50,7 @@
             this.date_real = new System.Windows.Forms.Label();
             this.connect1 = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.timer_time = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -82,10 +83,9 @@
             this.circularProgressBar1.SuperscriptMargin = new System.Windows.Forms.Padding(10, 35, 0, 0);
             this.circularProgressBar1.SuperscriptText = "   bpm";
             this.circularProgressBar1.TabIndex = 0;
-            this.circularProgressBar1.Text = "85";
+            this.circularProgressBar1.Text = "0";
             this.circularProgressBar1.TextMargin = new System.Windows.Forms.Padding(8, 8, 0, 0);
             this.circularProgressBar1.UseWaitCursor = true;
-            this.circularProgressBar1.Value = 68;
             this.circularProgressBar1.Click += new System.EventHandler(this.circularProgressBar1_Click);
             // 
             // START
@@ -151,6 +151,7 @@
             // down
             // 
             this.down.BackColor = System.Drawing.Color.Red;
+            this.down.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.down.Font = new System.Drawing.Font("Microsoft Sans Serif", 39.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.down.ForeColor = System.Drawing.Color.Black;
             this.down.Location = new System.Drawing.Point(194, 405);
@@ -168,7 +169,7 @@
             this.pictureBox1.Enabled = false;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(875, 127);
+            this.pictureBox1.Location = new System.Drawing.Point(784, 139);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(67, 79);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -177,16 +178,17 @@
             this.pictureBox1.Visible = false;
             this.pictureBox1.WaitOnLoad = true;
             // 
-            // label4
+            // text_kao
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label4.ForeColor = System.Drawing.Color.Cyan;
-            this.label4.Location = new System.Drawing.Point(800, 209);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(199, 73);
-            this.label4.TabIndex = 9;
-            this.label4.Text = "1,153";
+            this.text_kao.AutoSize = true;
+            this.text_kao.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.text_kao.ForeColor = System.Drawing.Color.Cyan;
+            this.text_kao.Location = new System.Drawing.Point(840, 145);
+            this.text_kao.Name = "text_kao";
+            this.text_kao.Size = new System.Drawing.Size(180, 73);
+            this.text_kao.TabIndex = 9;
+            this.text_kao.Text = "0000";
+            this.text_kao.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label5
             // 
@@ -205,11 +207,11 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Segoe Print", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Lime;
-            this.label6.Location = new System.Drawing.Point(833, 324);
+            this.label6.Location = new System.Drawing.Point(834, 250);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(141, 112);
             this.label6.TabIndex = 11;
-            this.label6.Text = "10";
+            this.label6.Text = "00";
             // 
             // data_serialport
             // 
@@ -219,6 +221,7 @@
             // add
             // 
             this.add.BackColor = System.Drawing.Color.Lime;
+            this.add.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.add.Font = new System.Drawing.Font("Microsoft Sans Serif", 39.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.add.ForeColor = System.Drawing.Color.Black;
             this.add.Location = new System.Drawing.Point(194, 278);
@@ -296,6 +299,10 @@
             this.comboBox1.Size = new System.Drawing.Size(102, 21);
             this.comboBox1.TabIndex = 23;
             // 
+            // timer_time
+            // 
+            this.timer_time.Tick += new System.EventHandler(this.timer_time_Tick);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -311,7 +318,7 @@
             this.Controls.Add(this.add);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.text_kao);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.down);
             this.Controls.Add(this.text_speed);
@@ -343,7 +350,7 @@
         private System.Windows.Forms.Label text_speed;
         private System.Windows.Forms.Button down;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label text_kao;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Timer data_serialport;
@@ -355,6 +362,7 @@
         private System.Windows.Forms.Label date_real;
         private System.Windows.Forms.Button connect1;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Timer timer_time;
     }
 }
 

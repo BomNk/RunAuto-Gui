@@ -31,8 +31,10 @@ namespace RunAuto
 
             InitializeComponent();
             getAvailableComponent();
+            timer_time.Start();
             circularProgressBar1.Minimum = 0;
             circularProgressBar1.Maximum = 200;
+            circularProgressBar1.Value = 0;
             
 
         }
@@ -56,46 +58,47 @@ namespace RunAuto
             // data_serialport.Enabled = true;
             //data_serialport.Start();
             this.BeginInvoke(new LineReceivedEvent(LineReceived),str);
-           
+            
             //Data_table.Text = in_data;
         }
         private delegate void LineReceivedEvent(string line);
         private void LineReceived(string str)
         {
-            int x = 0;
-           
-            /* for(int i = 0; i < IntParseFast(str); i++)
-             {
-                 x++;
-             }*/
-            x = Int32.Parse(str);
+            try
+            {
+                int x = 0;
+                string[] aa = str.Split('/');
+                /* for(int i = 0; i < IntParseFast(str); i++)
+                 {
+                     x++;
+                 }*/
+                x = Int32.Parse(aa[0]);
+                //x[1] = Int32.Parse(aa[1]);
+                text_kao.Text = aa[1];
+                if (x >= 0 && x < 200)
+                {
+                    circularProgressBar1.Text = aa[0];
+                    circularProgressBar1.Value = Int32.Parse(aa[0]);
 
-            if (x >= 0 && x < 200)
-            {
-                circularProgressBar1.Text = str;
-                circularProgressBar1.Value =  Int32.Parse(str);
+
+                }
+                else
+                {
+                    circularProgressBar1.Text = "Error";
+                    circularProgressBar1.Value = 0;
+                }
             }
-            else
+            catch(Exception ex)
             {
-                circularProgressBar1.Text = "Error";
-                circularProgressBar1.Value = 0;
+                MessageBox.Show(ex.Message, "Error");
             }
+                
                 //circularProgressBar1.Update();
 
 
-            }
-
-        public static int IntParseFast(string value)
-        {
-            int result = 0;
-            StringBuilder x = new StringBuilder();
-            x.Append(value);
-
-            for (int i = 0; i < x.Length; i++)
-                result = result + ((x[i] - '0')*(10^i));
-
-            return result;
         }
+
+       
 
 
 
@@ -116,16 +119,48 @@ namespace RunAuto
 
         private void START_Click(object sender, EventArgs e)
         {
-            myport.DataReceived += myport_DataReceived;
-            stopwatch.Start();
-             data_serialport.Start();
+
+            try
+            {
+                myport.Open();
+                myport.DataReceived += myport_DataReceived;
+                stopwatch.Start();
+                data_serialport.Start();
+                // stopwatch.Start();
+
+                // data_serialport.Start();
+
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error");
+            }
+         
             
         }
 
         private void STOP_Click(object sender, EventArgs e)
         {
-
+            myport.Write("000");
+            circularProgressBar1.Value = 0;
+            circularProgressBar1.Text = "0";
+            
+            myport.Close();
+            stopwatch.Stop();
+            data_serialport.Stop();
+            
+             
         }
+
+        private void timer_time_Tick(object sender, EventArgs e)
+        {
+            real_time.Text = DateTime.Now.TimeOfDay.ToString().Substring(0, 8);
+            date_real.Text = DateTime.Now.Date.ToString().Substring(0, 10);
+        }
+
+       
 
         private void down_Click(object sender, EventArgs e)
         {
@@ -142,8 +177,7 @@ namespace RunAuto
             data++;
             // time.Text = data + "";
             //set_time.Text = DateTime.Now.TimeOfDay.ToString().Substring(0,8);  
-            real_time.Text = DateTime.Now.TimeOfDay.ToString().Substring(0, 8);
-            date_real.Text = DateTime.Now.Date.ToString().Substring(0, 10);
+           
             // show RealTime
 
            
@@ -170,9 +204,9 @@ namespace RunAuto
             myport.DataBits = 8;
             myport.StopBits = StopBits.One;
            // myport.DataReceived += myport_DataReceived;
-            try
+           /* try
             {
-                myport.Open();
+                
                // stopwatch.Start();
                 
                // data_serialport.Start();
@@ -183,7 +217,7 @@ namespace RunAuto
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Error");
-            }
+            }*/
         }
 
 
