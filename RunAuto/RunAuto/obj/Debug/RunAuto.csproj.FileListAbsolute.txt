@@ -90,3 +90,28 @@ C:\Users\tanap\Documents\GitHub\RunAuto-Gui\RunAuto-Gui\RunAuto\RunAuto\bin\Debu
 C:\Users\tanap\Documents\GitHub\RunAuto-Gui\RunAuto-Gui\RunAuto\RunAuto\bin\Debug\Microsoft.DirectX.Direct3D.dll
 C:\Users\tanap\Documents\GitHub\RunAuto-Gui\RunAuto-Gui\RunAuto\RunAuto\bin\Debug\Microsoft.DirectX.dll
 C:\Users\tanap\Documents\GitHub\RunAuto-Gui\RunAuto-Gui\RunAuto\RunAuto\bin\Debug\Microsoft.DirectX.Direct3D.xml
+C:\Users\tanap\Documents\GitHub\Gui RunAuto\RunAuto-Gui\RunAuto\RunAuto\bin\Debug\RunAuto.exe.config
+C:\Users\tanap\Documents\GitHub\Gui RunAuto\RunAuto-Gui\RunAuto\RunAuto\bin\Debug\RunAuto.exe
+C:\Users\tanap\Documents\GitHub\Gui RunAuto\RunAuto-Gui\RunAuto\RunAuto\bin\Debug\RunAuto.pdb
+C:\Users\tanap\Documents\GitHub\Gui RunAuto\RunAuto-Gui\RunAuto\RunAuto\bin\Debug\CircularProgressBar.dll
+C:\Users\tanap\Documents\GitHub\Gui RunAuto\RunAuto-Gui\RunAuto\RunAuto\bin\Debug\Microsoft.DirectX.AudioVideoPlayback.dll
+C:\Users\tanap\Documents\GitHub\Gui RunAuto\RunAuto-Gui\RunAuto\RunAuto\bin\Debug\Microsoft.DirectX.Direct3D.dll
+C:\Users\tanap\Documents\GitHub\Gui RunAuto\RunAuto-Gui\RunAuto\RunAuto\bin\Debug\Microsoft.DirectX.dll
+C:\Users\tanap\Documents\GitHub\Gui RunAuto\RunAuto-Gui\RunAuto\RunAuto\bin\Debug\WinFormAnimation.dll
+C:\Users\tanap\Documents\GitHub\Gui RunAuto\RunAuto-Gui\RunAuto\RunAuto\bin\Debug\Xamarin.Forms.Core.dll
+C:\Users\tanap\Documents\GitHub\Gui RunAuto\RunAuto-Gui\RunAuto\RunAuto\bin\Debug\Xamarin.Forms.Platform.dll
+C:\Users\tanap\Documents\GitHub\Gui RunAuto\RunAuto-Gui\RunAuto\RunAuto\bin\Debug\Xamarin.Forms.Xaml.dll
+C:\Users\tanap\Documents\GitHub\Gui RunAuto\RunAuto-Gui\RunAuto\RunAuto\bin\Debug\CircularProgressBar.xml
+C:\Users\tanap\Documents\GitHub\Gui RunAuto\RunAuto-Gui\RunAuto\RunAuto\bin\Debug\Microsoft.DirectX.Direct3D.xml
+C:\Users\tanap\Documents\GitHub\Gui RunAuto\RunAuto-Gui\RunAuto\RunAuto\bin\Debug\WinFormAnimation.xml
+C:\Users\tanap\Documents\GitHub\Gui RunAuto\RunAuto-Gui\RunAuto\RunAuto\bin\Debug\Xamarin.Forms.Core.pdb
+C:\Users\tanap\Documents\GitHub\Gui RunAuto\RunAuto-Gui\RunAuto\RunAuto\bin\Debug\Xamarin.Forms.Core.xml
+C:\Users\tanap\Documents\GitHub\Gui RunAuto\RunAuto-Gui\RunAuto\RunAuto\bin\Debug\Xamarin.Forms.Platform.pdb
+C:\Users\tanap\Documents\GitHub\Gui RunAuto\RunAuto-Gui\RunAuto\RunAuto\bin\Debug\Xamarin.Forms.Xaml.pdb
+C:\Users\tanap\Documents\GitHub\Gui RunAuto\RunAuto-Gui\RunAuto\RunAuto\bin\Debug\Xamarin.Forms.Xaml.xml
+C:\Users\tanap\Documents\GitHub\Gui RunAuto\RunAuto-Gui\RunAuto\RunAuto\obj\Debug\RunAuto.csprojResolveAssemblyReference.cache
+C:\Users\tanap\Documents\GitHub\Gui RunAuto\RunAuto-Gui\RunAuto\RunAuto\obj\Debug\RunAuto.Form1.resources
+C:\Users\tanap\Documents\GitHub\Gui RunAuto\RunAuto-Gui\RunAuto\RunAuto\obj\Debug\RunAuto.Properties.Resources.resources
+C:\Users\tanap\Documents\GitHub\Gui RunAuto\RunAuto-Gui\RunAuto\RunAuto\obj\Debug\RunAuto.csproj.GenerateResource.Cache
+C:\Users\tanap\Documents\GitHub\Gui RunAuto\RunAuto-Gui\RunAuto\RunAuto\obj\Debug\RunAuto.exe
+C:\Users\tanap\Documents\GitHub\Gui RunAuto\RunAuto-Gui\RunAuto\RunAuto\obj\Debug\RunAuto.pdb
