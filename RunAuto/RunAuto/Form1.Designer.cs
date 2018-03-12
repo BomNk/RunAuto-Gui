@@ -51,6 +51,8 @@
             this.connect1 = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.timer_time = new System.Windows.Forms.Timer(this.components);
+            this.Test = new System.Windows.Forms.Button();
+            this.pnlVideo = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -86,6 +88,7 @@
             this.circularProgressBar1.Text = "0";
             this.circularProgressBar1.TextMargin = new System.Windows.Forms.Padding(8, 8, 0, 0);
             this.circularProgressBar1.UseWaitCursor = true;
+            this.circularProgressBar1.Value = 68;
             this.circularProgressBar1.Click += new System.EventHandler(this.circularProgressBar1_Click);
             // 
             // START
@@ -303,12 +306,31 @@
             // 
             this.timer_time.Tick += new System.EventHandler(this.timer_time_Tick);
             // 
+            // Test
+            // 
+            this.Test.Location = new System.Drawing.Point(798, 365);
+            this.Test.Name = "Test";
+            this.Test.Size = new System.Drawing.Size(75, 23);
+            this.Test.TabIndex = 24;
+            this.Test.Text = "Test";
+            this.Test.UseVisualStyleBackColor = true;
+            // 
+            // pnlVideo
+            // 
+            this.pnlVideo.BackColor = System.Drawing.Color.DarkOliveGreen;
+            this.pnlVideo.Location = new System.Drawing.Point(336, 21);
+            this.pnlVideo.Name = "pnlVideo";
+            this.pnlVideo.Size = new System.Drawing.Size(395, 484);
+            this.pnlVideo.TabIndex = 25;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSlateGray;
             this.ClientSize = new System.Drawing.Size(1050, 646);
+            this.Controls.Add(this.pnlVideo);
+            this.Controls.Add(this.Test);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.connect1);
             this.Controls.Add(this.date_real);
@@ -363,6 +385,8 @@
         private System.Windows.Forms.Button connect1;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Timer timer_time;
+        private System.Windows.Forms.Button Test;
+        private System.Windows.Forms.Panel pnlVideo;
     }
 }
 

@@ -12,6 +12,13 @@ using System.Runtime.InteropServices.ComTypes;
 using System.Threading;
 using System.Diagnostics;
 
+using Microsoft.DirectX.AudioVideoPlayback;
+using System.IO;
+
+
+
+
+
 namespace RunAuto
 {
     public partial class Form1 : Form 
@@ -25,17 +32,28 @@ namespace RunAuto
 
         int speedMotor = 0;
         public string text_portName = "";
+
+        // Video //
+        private Video video;
+        private string[] videoPaths;
+        private string folderPath = @"C:\Users\tanap\Documents\[C# Winforms] Create your own Video Player (DirectX)\";
+        //private int selectedIndex = 0;
+        private Size formSize;
+        private Size pnlSize;
+        //
+
         //string time = "";
         public Form1()
         {
-
+            
             InitializeComponent();
             getAvailableComponent();
             timer_time.Start();
             circularProgressBar1.Minimum = 0;
             circularProgressBar1.Maximum = 200;
             circularProgressBar1.Value = 0;
-            
+
+           
 
         }
         void getAvailableComponent()
@@ -47,9 +65,27 @@ namespace RunAuto
 
         private void Form1_Load(object sender, EventArgs e)
         {
-      
+            formSize = new Size(this.Width, this.Height);
+            pnlSize = new Size(pnlVideo.Width, pnlVideo.Height);
+            videoPaths = Directory.GetFiles(folderPath, "*.wmv");
+
+            video = new Video(videoPaths[0]);
+            video.Owner = pnlVideo;
+            pnlVideo.Size = pnlSize;
+
+            video.Play();
+
+            //video.Ending += new EventHandler(BackLoop);
+
+            //video.Stop();
         }
-      
+        private void BackLoop(object sender, EventArgs e)
+        {
+
+            video.CurrentPosition = 0;// Video keeps looping...
+
+        }
+
 
         private void myport_DataReceived(object sender, SerialDataReceivedEventArgs e)
         {
